@@ -9,6 +9,24 @@ $bg-color: #dedede;
 }
 body{
   background-color: $bg-color;
+  h2 {
+    font-family: $main-font;
+    font-weight: 600;
+    line-height: 50px;
+    color: $main-font-color;
+    font-size: 46px;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #7a7a7a;
+      position: relative;
+      bottom: 20px;
+      margin: auto;
+    }
+  }
 }
 .navbar{
   font-family: $main-font!important;
@@ -80,15 +98,15 @@ body{
     color: $main-font-color;
     margin-top: 166px;
     margin-bottom: 21px;
-    font-size: 80px;
+    font-size: 75px;
     padding-right: 0;
     padding-left: 0;
   }
  img{
-   position: relative;
    //top: -59px; // need or not?
-   padding-right: 15px;
-   padding-left: 15px;
+   padding-right: 0;
+   padding-left: 0;
+   margin-bottom: 9px;
  }
   p{
     font-family: $main-font;
@@ -96,16 +114,13 @@ body{
     font-size: 22px;
     line-height: 1.42857143;
     color: #9c9c9c;
-    box-sizing: border-box;
     margin: 0 0 32px;
     position: relative;
-    min-height: 1px;
     padding-right: 0;
     padding-left: 0;
-    float: left;
-    width: 33.33333333%;
   }
   a{
+    display: inline-block;
     line-height: 50px;
     font-family: $main-font;
     font-size: $main-font-size;
@@ -115,7 +130,7 @@ body{
     padding-left: 30px;
     padding-right: 30px;
     margin-right: 20px;
-    &:nth-child(2){
+    &:nth-child(4){
       background-color: transparent;
       border: 1px solid #4d4d4d;
       padding-left: 47px;
@@ -127,23 +142,15 @@ body{
   background-color: white;
   padding-top: 110px;
   h2 {
-    font-family: $main-font;
-    font-weight: 600;
-    line-height: 50px;
-    color: $main-font-color;
-    margin-top: 93px;
     margin-bottom: 15px;
-    font-size: 46px;
+    max-width: 315px;
+  }
+  img{
+    display: block;
+    width: 100%;
+    padding-right: 0;
     padding-left: 0;
-    &:before{
-      content: "";
-      display: block;
-      width: 60px;
-      height: 2px;
-      background-color: #7a7a7a;
-      position: relative;
-      bottom: 20px;
-    }
+    margin-bottom: 125px;
   }
   p{
     font-family: $main-font;
@@ -152,22 +159,164 @@ body{
     line-height: 29px;
     color: $main-font-color;
     margin: 0 0 35px;
-    padding-right: 15px;
+    padding-right: 0;
     padding-left: 0;
   }
   a{
+    display: inline-block;
     font-family: $main-font;
     font-weight: 500;
     font-size: $main-font-size;
     line-height: 48px;
-    padding: 0 47px;
+    padding: 0;
     color: $main-font-color;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 47px;
+    padding-right: 47px;
     border: 1px solid #4d4d4d;
     text-align: center;
   }
 }
-
+.services{
+  padding-top: 143px;
+  h2{
+    margin-bottom: 62px;
+  }
+  img{
+    height: 78px;
+    margin-bottom: 16px;
+  }
+  p{
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 20px;
+    color: $main-font-color;
+    padding: 0;
+    margin: 0 0 83px;
+    //&:last-child{
+    //  margin-bottom: 114px;
+    //}
+  }
+}
+.my-skills {
+  padding-top: 143px;
+  background-color: white;
+  h2 {
+    margin-bottom: 51px;
+  }
+  img{
+    display: block;
+    max-width: 984px;
+    margin-bottom: 125px;
+  }
+}
+.portfolio{
+  padding-top: 150px;
+  h2{
+      margin-bottom: 46px;
+  }
+  img{
+      margin-bottom: 30px;
+  }
+  a{
+    display: inline-block;
+    margin: auto;
+    line-height: 50px;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: $main-font-size;
+    background-color: white;
+    color: $main-font-color;
+    text-decoration: none;
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-bottom: 123px;
+  }
+}
+.testimonials{
+  background-color: white;
+  padding-top: 150px;
+  h2{
+    margin-bottom: 58px;
+  }
+}
+.funfact{
+  padding-top: 52px;
+  img{
+    height: 78px;
+    margin-bottom: 33px;
+    //&:first-child{
+    //  height: 96px;
+    //}
+  }
+  h4{
+    font-family: $main-font;
+    font-weight: 600;
+    color: $main-font-color;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 30px;
+  }
+  p{
+    font-family: $main-font;
+    font-size: 30px;
+    color: $main-font-color;
+    padding: 0;
+    margin: 0 0 65px;
+  }
+}
+.white-bg{
+  background-color: white;
+  min-height: 154px;
+}
+footer{
+  padding-top: 170px;
+  background-image: url("../images/footer_06.jpg");
+  background-size: cover;
+  h2{
+    color: white;
+    margin-bottom: 71px;
+    &:before{
+      background-color: #c1c1c1;
+    }
+  }
+  form{
+    font-family: $main-font;
+    font-size: $main-font-size;
+    color: $main-font-color;
+    input{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0 0 30px;
+      padding-right: 15px;
+      padding-left: 10px;
+      line-height: 57px;
+    }
+    textarea{
+      box-sizing: border-box;
+      margin: 0;
+      height: 207px;
+      padding-right: 15px;
+      padding-left: 10px;
+      padding-top: 10px;
+      resize: none;
+      margin-bottom: 30px;
+    }
+    button{
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 0;
+      color: inherit;
+      font: inherit;
+      margin: auto;
+      overflow: visible;
+      text-transform: none;
+      -webkit-appearance: button;
+      cursor: pointer;
+      line-height: 50px;
+      padding-left: 31px;
+      padding-right: 50px;
+    }
+  }
+}
 
 
