@@ -1,13 +1,18 @@
 $main-font: 'Asap', sans-serif;
 $main-font-color: #4d4d4d;
+$main-font-size: 16px;
 $bg-color: #dedede;
 
+*{
+  padding: 0;
+  margin: 0;
+}
 body{
   background-color: $bg-color;
 }
 .navbar{
   font-family: $main-font!important;
-  font-size: 16px!important;
+  font-size: $main-font-size!important;
   color: $main-font-color!important;
   margin-bottom: 20px;
   border: 0!important;
@@ -21,7 +26,7 @@ body{
     font-family: 'Lato', sans-serif !important;
     height: auto;
     padding: 31px 0 0;
-    font-size: 16px;
+    font-size: $main-font-size;
     line-height: 20px;
     text-shadow: none!important;
     color:$main-font-color!important;
@@ -35,7 +40,7 @@ body{
       &:nth-child(2){
         text-align: left;
         font-family: 'Lato', sans-serif !important;
-        font-size: 16px;
+        font-size: $main-font-size;
         color: $main-font-color!important;
         margin: 0 0 7px;
       }
@@ -75,20 +80,93 @@ body{
     color: $main-font-color;
     margin-top: 166px;
     margin-bottom: 21px;
-    font-size: 90px;
+    font-size: 80px;
     padding-right: 0;
     padding-left: 0;
   }
  img{
    position: relative;
-   top: -59px;
-   min-height: 1px;
-   padding-right: 0;
-   padding-left: 0;
-   float: left;
-   width: 50%;
-   margin-left: 8.33333333%;
+   //top: -59px; // need or not?
+   padding-right: 15px;
+   padding-left: 15px;
  }
+  p{
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.42857143;
+    color: #9c9c9c;
+    box-sizing: border-box;
+    margin: 0 0 32px;
+    position: relative;
+    min-height: 1px;
+    padding-right: 0;
+    padding-left: 0;
+    float: left;
+    width: 33.33333333%;
+  }
+  a{
+    line-height: 50px;
+    font-family: $main-font;
+    font-size: $main-font-size;
+    background-color: white;
+    color: $main-font-color;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 20px;
+    &:nth-child(2){
+      background-color: transparent;
+      border: 1px solid #4d4d4d;
+      padding-left: 47px;
+      padding-right: 47px;
+    }
+  }
+}
+.about{
+  background-color: white;
+  padding-top: 110px;
+  h2 {
+    font-family: $main-font;
+    font-weight: 600;
+    line-height: 50px;
+    color: $main-font-color;
+    margin-top: 93px;
+    margin-bottom: 15px;
+    font-size: 46px;
+    padding-left: 0;
+    &:before{
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: #7a7a7a;
+      position: relative;
+      bottom: 20px;
+    }
+  }
+  p{
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: $main-font-size;
+    line-height: 29px;
+    color: $main-font-color;
+    margin: 0 0 35px;
+    padding-right: 15px;
+    padding-left: 0;
+  }
+  a{
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: $main-font-size;
+    line-height: 48px;
+    padding: 0 47px;
+    color: $main-font-color;
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid #4d4d4d;
+    text-align: center;
+  }
 }
 
 
