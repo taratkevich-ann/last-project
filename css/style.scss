@@ -54,6 +54,12 @@ body {
 }
 
 .navbar-header {
+  .navbar-toggle {
+    @include max-screen(414px) {
+      padding-top: 23px;
+    }
+  }
+
   a {
     font-family: 'Lato', sans-serif !important;
     height: auto;
@@ -117,73 +123,99 @@ body {
 
 .hero-area {
   padding-bottom: 9px;
-  display: flex;
-  h1 {
-    font-family: $main-font;
-    font-weight: 500;
-    color: $main-font-color;
-    margin-top: 166px;
-    margin-bottom: 21px;
-    font-size: 75px;
-    padding-right: 0;
-    padding-left: 0;
-    @include max-screen(414px){
-      font-size: 62px;
-      margin-top: 30px;
-    }
-    @include max-screen(1024px){
-      margin-top: 50px;
-    }
-  }
 
-  img {
-    display: inline-block;
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  p {
-    font-family: $main-font;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 1.42857143;
-    color: #9c9c9c;
-    margin: 0 0 32px;
-    position: relative;
-    padding-right: 0;
-    padding-left: 0;
-    @include max-screen(414px){
-      font-size: 20px;
-    }
-  }
-
-  a {
-    display: inline-block;
-    line-height: 50px;
-    font-family: $main-font;
-    font-size: $main-font-size;
-    background-color: transparent;
-    border: 1px solid #4d4d4d;
-    color: $main-font-color;
-    text-decoration: none;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-right: 20px;
-    @include max-screen(414px){
-      width: 100%;
-      text-align: center;
-      margin-bottom: 10px;
+  .hero {
+    @include max-screen(768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    &:nth-child(4) {
-      padding-left: 47px;
-      padding-right: 47px;
+    .hero-area-text {
+      @include max-screen(768px) {
+        order: 2;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: $main-font;
+        font-weight: 500;
+        color: $main-font-color;
+        margin-top: 166px;
+        margin-bottom: 21px;
+        font-size: 75px;
+        padding-right: 0;
+        padding-left: 0;
+        @include max-screen(414px) {
+          font-size: 62px;
+          margin-top: 0;
+        }
+        @include max-screen(1024px) {
+          margin-top: 50px;
+        }
+      }
+
+      p {
+        font-family: $main-font;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1.42857143;
+        color: #9c9c9c;
+        margin: 0 0 32px;
+        position: relative;
+        padding-right: 0;
+        padding-left: 0;
+        @include max-screen(414px) {
+          font-size: 20px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        line-height: 50px;
+        font-family: $main-font;
+        font-size: $main-font-size;
+        background-color: transparent;
+        border: 1px solid #4d4d4d;
+        color: $main-font-color;
+        text-decoration: none;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-right: 20px;
+
+        @include max-screen(414px) {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        @include max-screen(768px) {
+          margin-bottom: 40px;
+        }
+
+
+        &:nth-child(4) {
+          padding-left: 47px;
+          padding-right: 47px;
+        }
+
+        &:hover {
+          background-color: white;
+          border: 0;
+        }
+      }
     }
 
-    &:hover {
-      background-color: white;
-      border: 0;
+    .hero-area-img {
+      @include max-screen(768px) {
+        order: 1;
+      }
+
+      img {
+        display: inline-block;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+      }
     }
   }
 }
@@ -191,83 +223,113 @@ body {
 .about {
   background-color: white;
   padding-top: 110px;
-  @include max-screen(414px)
-  {
+  @include max-screen(414px) {
     padding-top: 50px;
   }
 
-  h2 {
-    font-family: $main-font;
-    font-weight: 600;
-    line-height: 50px;
-    color: $main-font-color;
-    font-size: 46px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    margin-top: 45px;
-    @include max-screen(1024px)
-    {
-      margin-top: 0;
+  .more-about {
+    @include max-screen(768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    &:before {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background-color: #7a7a7a;
-      margin-bottom: 20px;
+    .about-text {
+      @include max-screen(768px) {
+        order: 2;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: $main-font;
+        font-weight: 600;
+        line-height: 50px;
+        color: $main-font-color;
+        font-size: 46px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        margin-top: 45px;
+        @include max-screen(1024px) {
+          margin-top: 0;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 60px;
+          height: 3px;
+          background-color: #7a7a7a;
+          margin-bottom: 20px;
+          @include max-screen(768px) {
+            margin: auto;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+
+      p {
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: $main-font-size;
+        line-height: 29px;
+        color: $main-font-color;
+        margin: 0 0 35px;
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      a {
+        display: inline-block;
+        font-family: $main-font;
+        font-weight: 500;
+        font-size: $main-font-size;
+        line-height: 48px;
+        text-decoration: none;
+        color: $main-font-color;
+        padding-left: 47px;
+        padding-right: 47px;
+        border: 1px solid #4d4d4d;
+        text-align: center;
+        @include max-screen(414px) {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        @include max-screen(768px) {
+          margin-bottom: 40px;
+        }
+
+        &:hover {
+          background-color: white;
+          border: 0;
+        }
+      }
     }
-  }
 
-  img {
-    display: inline-block;
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    margin-bottom: 125px;
-  }
+    .about-img {
+      @include max-screen(768px) {
+        order: 1;
+        text-align: center;
+      }
 
-  p {
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: $main-font-size;
-    line-height: 29px;
-    color: $main-font-color;
-    margin: 0 0 35px;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  a {
-    display: inline-block;
-    font-family: $main-font;
-    font-weight: 500;
-    font-size: $main-font-size;
-    line-height: 48px;
-    text-decoration: none;
-    color: $main-font-color;
-    padding-left: 47px;
-    padding-right: 47px;
-    border: 1px solid #4d4d4d;
-    text-align: center;
-    @include max-screen(414px){
-      width: 100%;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    &:hover {
-      background-color: white;
-      border: 0;
+      img {
+        display: inline-block;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 125px;
+        @include max-screen(768px) {
+          margin-bottom: 50px;
+        }
+      }
     }
   }
 }
 
 .services {
   padding-top: 143px;
-  @include max-screen(414px)
-  {
+  @include max-screen(414px) {
     padding-top: 70px;
   }
 
@@ -287,8 +349,8 @@ body {
     color: $main-font-color;
     padding: 0;
     margin: 0 0 83px;
-    @include max-screen(1024px)
-    {
+
+    @include max-screen(1024px) {
       font-size: $main-font-size;
     }
   }
@@ -297,8 +359,7 @@ body {
 .my-skills {
   padding-top: 143px;
   background-color: white;
-  @include max-screen(414px)
-  {
+  @include max-screen(414px) {
     padding-top: 70px;
   }
 
@@ -315,8 +376,7 @@ body {
 
 .portfolio {
   padding-top: 150px;
-  @include max-screen(414px)
-  {
+  @include max-screen(414px) {
     padding-top: 70px;
   }
 
@@ -353,8 +413,7 @@ body {
 .testimonials {
   background-color: white;
   padding-top: 150px;
-  @include max-screen(414px)
-  {
+  @include max-screen(414px) {
     padding-top: 70px;
   }
 
@@ -373,16 +432,14 @@ body {
       .carousel-components {
         display: flex;
         justify-content: center;
-        @include max-screen(414px)
-        {
+        @include max-screen(414px) {
           flex-direction: column;
         }
 
         .img-testimonials {
           display: inline-block;
           margin-right: 30px;
-          @include max-screen(414px)
-          {
+          @include max-screen(414px) {
             margin: 0 15px 10px;
           }
         }
@@ -392,11 +449,11 @@ body {
         }
 
         .txt-carousel {
-          @include max-screen(414px)
-          {
+          @include max-screen(414px) {
             padding-right: 15px;
             padding-left: 15px;
           }
+
           h4 {
             font-family: $main-font;
             font-weight: 500;
@@ -488,8 +545,7 @@ footer {
   padding-top: 170px;
   background-image: url("../images/footer_06.jpg");
   background-size: cover;
-  @include max-screen(414px)
-  {
+  @include max-screen(414px) {
     padding-top: 70px;
   }
 
@@ -534,8 +590,8 @@ footer {
       margin: auto;
       cursor: pointer;
       line-height: 50px;
-      padding-left: 31px;
-      padding-right: 50px;
+      padding-left: 40px;
+      padding-right: 40px;
       margin-bottom: 56px;
     }
   }
@@ -546,8 +602,7 @@ footer {
 
     .social {
       display: inline-block;
-      @include max-screen(414px)
-      {
+      @include max-screen(414px) {
         display: flex;
         justify-content: center;
 
@@ -616,8 +671,8 @@ footer {
           color: white;
           text-align: center;
           padding-bottom: 37px;
-          @include max-screen(414px)
-          {
+
+          @include max-screen(414px) {
             display: flex;
             justify-content: center;
             margin-top: -15px;
@@ -647,8 +702,7 @@ footer {
       position: fixed;
       bottom: 192px;
       right: 30px;
-      @include max-screen(414px)
-      {
+      @include max-screen(768px) {
         right: 0;
       }
     }
