@@ -467,23 +467,19 @@ footer {
         footer .down-footer .social a:hover:before {
           color: white;
           background-color: #0084b4; }
-    footer .down-footer .row {
-      display: inline; }
-      footer .down-footer .row .last-text {
-        display: inline; }
+    footer .down-footer .row .last-text span {
+      display: inline-block;
+      font-family: "Asap", sans-serif;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding-bottom: 37px; }
+      @media screen and (max-width: 414px) {
         footer .down-footer .row .last-text span {
-          display: inline-block;
-          font-family: "Asap", sans-serif;
-          font-size: 16px;
-          color: white;
-          text-align: center;
-          padding-bottom: 37px; }
-          @media screen and (max-width: 414px) {
-            footer .down-footer .row .last-text span {
-              display: flex;
-              justify-content: center;
-              margin-top: -15px;
-              padding-bottom: 20px; } }
+          display: flex;
+          justify-content: center;
+          margin-top: -15px;
+          padding-bottom: 20px; } }
 
 .up a {
   text-decoration: none; }
